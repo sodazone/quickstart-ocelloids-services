@@ -1,8 +1,13 @@
 {
   "name": "quickstart-ocelloids-services",
-  "module": "index.ts",
+  "type": "module",
+  "module": "index.js",
   "scripts": {
+    "start": "bun run index.ts",
     "lint": "biome check --write"
+  },
+  "bun-create": {
+    "start": "bun run index.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
@@ -11,7 +16,6 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "type": "module",
   "dependencies": {
     "@sodazone/ocelloids-client": "^2.0.2"
   }
