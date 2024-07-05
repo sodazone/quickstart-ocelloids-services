@@ -4,4 +4,8 @@ const client = new OcelloidsClient({
   apiKey: process.env.OC_API_KEY,
 });
 
-client.health().then(console.log).catch(console.error);
+try {
+await client.health()
+} catch(error) {
+  console.error(error)
+}
