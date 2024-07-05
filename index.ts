@@ -5,7 +5,7 @@ const client = new OcelloidsClient({
 });
 
 try {
-await client.health()
-} catch(error) {
-  console.error(error)
+  console.log(await client.health());
+} catch (error) {
+  console.error(error);
 }
