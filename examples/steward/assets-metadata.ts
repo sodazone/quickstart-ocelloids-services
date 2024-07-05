@@ -5,8 +5,7 @@ import {
 
 // Instantiate an Ocelloids Client
 const steward = new OcelloidsClient({
-  httpUrl: "http://127.0.0.1:3000",
-  //apiKey: process.env.OC_API_KEY,
+  apiKey: process.env.OC_API_KEY,
 }).agent("steward");
 
 // Get the assets metadata from multiple networks

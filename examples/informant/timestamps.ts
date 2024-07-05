@@ -1,8 +1,7 @@
 import { OcelloidsClient } from "@sodazone/ocelloids-client";
 
 const informant = new OcelloidsClient({
-  wsUrl: "ws://127.0.0.1:3000",
-  //apiKey: process.env.OC_API_KEY,
+  apiKey: process.env.OC_API_KEY,
 }).agent("informant");
 
 informant.subscribe(
