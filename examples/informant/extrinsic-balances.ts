@@ -10,8 +10,17 @@ informant.subscribe(
     filter: {
       type: "extrinsic",
       match: {
-        "extrinsic.method.section": "timestamp",
-        "extrinsic.method.method": "set",
+        'extrinsic.call.section': 'balances',
+        'extrinsic.call.method': { $in: [
+          'transferAllowDeath',
+          'transferKeepAlive'
+        ]},
+        'extrinsic.call.args.value': { 
+          $bn_gte: "15000000" 
+        },
+        'extrinsic.tip': {
+          $bn_lte: "1000"
+        }
       },
     },
   },
