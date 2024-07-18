@@ -22,7 +22,9 @@ To run an example, execute:
 OC_API_KEY=<YOUR_API_KEY> bun run examples/steward/assets-metadata.ts
 ```
 
-Replace `YOUR_API_KEY` with your Ocelloids API key.
+Replace `YOUR_API_KEY` with your Ocelloids API key. If you don't have one yet, you can use our read-only key for testing:
+
+https://www.ocelloids.net/docs/api-key/
 
 Alternatively, you can create a `.env` file in the project root directory to store the API key:
 
