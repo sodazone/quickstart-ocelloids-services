@@ -14,9 +14,10 @@
     "bun-types": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@sodazone/ocelloids-client": "^2.0.2"
+    "@sodazone/ocelloids-client": "^2.1.6",
+    "@sodazone/ocelloids-sdk": "^1.2.13"
   }
 }

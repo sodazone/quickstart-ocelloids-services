@@ -14,15 +14,19 @@ try {
     types.StewardQueryArgs,
     types.AssetMetadata
   >({
-    op: "assets.metadata",
+    op: "assets",
     criteria: [
       {
         network: "urn:ocn:polkadot:1000",
-        assets: ["1984", '{"parents":1,"interior":{"x1":{"parachain":2011}}}'],
+        assets: [
+          "1984",
+          "1337",
+          '{"parents":1,"interior":{"x1":{"parachain":2011}}}',
+        ],
       },
       {
-        network: "urn:ocn:polkadot:2034",
-        assets: ["15", "10", "25"],
+        network: "urn:ocn:polkadot:2104",
+        assets: ["36", "37", "38"],
       },
       {
         network: "urn:ocn:polkadot:2004",

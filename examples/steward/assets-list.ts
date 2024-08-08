@@ -15,7 +15,7 @@ try {
     types.AssetMetadata
   >(
     {
-      op: "assets.metadata.list",
+      op: "assets.list",
       criteria: {
         network: "urn:ocn:polkadot:1000",
       },
