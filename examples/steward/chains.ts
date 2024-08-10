@@ -8,7 +8,7 @@ const steward = new OcelloidsClient({
   apiKey: process.env.OC_API_KEY,
 }).agent("steward");
 
-// Get the assets metadata from multiple networks
+// Get the chains information for multiple networks
 try {
   const { items } = await steward.query<
     types.StewardQueryArgs,
