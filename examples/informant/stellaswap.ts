@@ -3,9 +3,11 @@ import { OcelloidsClient } from "@sodazone/ocelloids-client";
 import stellaSwapAbi from "../../abis/stellaswap.json";
 
 const informant = new OcelloidsClient({
-  apiKey: process.env.OC_API_KEY,
+  wsUrl: 'ws://127.0.0.1:3000'
+  // apiKey: process.env.OC_API_KEY,
 }).agent("informant");
 
+// Subscribe to StellaSwap swapExactTokensForETH calls
 informant.subscribe(
   {
     networks: ["urn:ocn:polkadot:2004"],

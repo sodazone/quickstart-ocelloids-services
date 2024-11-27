@@ -6,7 +6,7 @@ const informant = new OcelloidsClient({
   apiKey: process.env.OC_API_KEY,
 }).agent("informant");
 
-// Subscribe to ERC20 transfers
+// Subscribe to ERC20 transfers on Moonbeam
 informant.subscribe(
   {
     networks: ["urn:ocn:polkadot:2004"],
