@@ -13,12 +13,14 @@ try {
   const { items } = await steward.query<
     types.StewardQueryArgs,
     types.AssetMetadata
-  >({
-    
-    op: "chains.list"
-  }, {
-    limit: 100
-  });
+  >(
+    {
+      op: "chains.list",
+    },
+    {
+      limit: 100,
+    },
+  );
 
   console.log("CHAIN DATA:\n", items);
 } catch (error) {

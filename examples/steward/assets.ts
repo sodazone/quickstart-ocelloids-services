@@ -21,12 +21,8 @@ try {
         assets: [
           "1984",
           "1337",
-          '{"parents":1,"interior":{"x1":{"parachain":2011}}}',
+          "parents:2:interior:X1:GlobalConsensus:Kusama",
         ],
-      },
-      {
-        network: "urn:ocn:polkadot:2104",
-        assets: ["36", "37", "38"],
       },
       {
         network: "urn:ocn:polkadot:2004",
@@ -37,7 +33,7 @@ try {
       },
       {
         network: "urn:ocn:polkadot:2030",
-        assets: ['{"token2":10}', '{"vToken2":0}'],
+        assets: ['token2:10', 'vtoken2:0'],
       },
     ],
   });

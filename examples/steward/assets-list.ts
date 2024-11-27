@@ -17,10 +17,10 @@ try {
     {
       op: "assets.list",
       criteria: {
-        network: "urn:ocn:polkadot:1000",
+        network: "urn:ocn:polkadot:2034",
       },
     },
-    { limit: 15 },
+    { limit: 20 },
   );
 
   console.log(`ASSETS LIST (${JSON.stringify(pageInfo)})\n`, items);
