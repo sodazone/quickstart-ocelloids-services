@@ -27,15 +27,17 @@ function handleMessage(msg: Message<xcm.XcmMessagePayload>) {
 }
 
 const agent = createXcmAgent({
+  httpUrl: process.env.OC_HTTP_URL ?? undefined,
+  wsUrl: process.env.OC_WS_URL ?? undefined,
   apiKey: process.env.OC_API_KEY,
 });
 
 // Subscribe on-demand
 const ws = await agent.subscribe(
   {
-    origins: ["urn:ocn:polkadot:2034"],
-    destinations: ["urn:ocn:polkadot:0"],
-    senders: ["5FLPbcLRQBqU3UCaNJCDF4bGify3Eor2dj3f4kxJq3szgeC5"],
+    origins: "*",
+    destinations: "*",
+    senders: "*",
     events: "*",
   },
   // Stream handlers
