@@ -33,7 +33,7 @@ try {
       },
       {
         network: "urn:ocn:polkadot:2030",
-        assets: ['token2:10', 'vtoken2:0'],
+        assets: ["token2:10", "vtoken2:0"],
       },
     ],
   });
