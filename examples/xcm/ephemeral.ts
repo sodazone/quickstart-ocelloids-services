@@ -32,6 +32,9 @@ const agent = createXcmAgent({
   apiKey: process.env.OC_API_KEY,
 });
 
+// Check health
+console.log(await agent.health())
+
 // Subscribe on-demand
 const ws = await agent.subscribe(
   {
