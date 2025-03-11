@@ -27,8 +27,8 @@ function handleMessage(msg: Message<xcm.XcmMessagePayload>) {
 }
 
 const agent = createXcmAgent({
-  httpUrl: process.env.OC_HTTP_URL ?? undefined,
-  wsUrl: process.env.OC_WS_URL ?? undefined,
+  httpUrl: process.env.OC_HTTP_URL,
+  wsUrl: process.env.OC_WS_URL,
   apiKey: process.env.OC_API_KEY,
 });
 

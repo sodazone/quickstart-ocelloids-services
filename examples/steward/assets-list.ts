@@ -1,19 +1,13 @@
-import {
-  OcelloidsClient,
-  type steward as types,
-} from "@sodazone/ocelloids-client";
+import { createStewardAgent } from "@sodazone/ocelloids-client";
 
 // Instantiate an Ocelloids Client
-const steward = new OcelloidsClient({
+const steward = createStewardAgent({
   apiKey: process.env.OC_API_KEY,
-}).agent("steward");
+});
 
 // List the assets metadata of a network
 try {
-  const { items, pageInfo } = await steward.query<
-    types.StewardQueryArgs,
-    types.AssetMetadata
-  >(
+  const { items, pageInfo } = await steward.query(
     {
       op: "assets.list",
       criteria: {

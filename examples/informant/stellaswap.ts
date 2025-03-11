@@ -1,10 +1,10 @@
-import { OcelloidsClient } from "@sodazone/ocelloids-client";
+import { createInformantAgent } from "@sodazone/ocelloids-client";
 
 import stellaSwapAbi from "../../abis/stellaswap.json";
 
-const informant = new OcelloidsClient({
+const informant = createInformantAgent({
   apiKey: process.env.OC_API_KEY,
-}).agent("informant");
+});
 
 // Subscribe to StellaSwap swapExactTokensForETH calls
 informant.subscribe(

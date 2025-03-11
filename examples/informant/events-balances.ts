@@ -1,9 +1,9 @@
-import { OcelloidsClient } from "@sodazone/ocelloids-client";
+import { createInformantAgent } from "@sodazone/ocelloids-client";
 
 // Instantiate an Ocelloids Client
-const informant = new OcelloidsClient({
+const informant = createInformantAgent({
   apiKey: process.env.OC_API_KEY,
-}).agent("informant");
+});
 
 // Subscribe to Events
 // This subscription configuration allows you to track specific events on the specified networks

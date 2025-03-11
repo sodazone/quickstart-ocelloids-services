@@ -1,8 +1,8 @@
-import { OcelloidsClient } from "@sodazone/ocelloids-client";
+import { createInformantAgent } from "@sodazone/ocelloids-client";
 
-const informant = new OcelloidsClient({
+const informant = createInformantAgent({
   apiKey: process.env.OC_API_KEY,
-}).agent("informant");
+});
 
 informant.subscribe(
   {

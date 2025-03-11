@@ -1,10 +1,10 @@
-import { OcelloidsClient } from "@sodazone/ocelloids-client";
+import { createInformantAgent } from "@sodazone/ocelloids-client";
 
 import erc20Abi from "../../abis/erc20.json";
 
-const informant = new OcelloidsClient({
+const informant = createInformantAgent({
   apiKey: process.env.OC_API_KEY,
-}).agent("informant");
+});
 
 // Subscribe to ERC20 transfers on Moonbeam
 informant.subscribe(
