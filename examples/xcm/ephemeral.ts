@@ -33,7 +33,7 @@ const agent = createXcmAgent({
 });
 
 // Check health
-console.log(await agent.health())
+console.log(await agent.health());
 
 // Subscribe on-demand
 const ws = await agent.subscribe(
