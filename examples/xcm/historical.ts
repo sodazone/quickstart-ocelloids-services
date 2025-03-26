@@ -16,6 +16,7 @@ agent.subscribe(
     history: {
       timeframe: "previous_2_hours",
     },
+    // biome-ignore lint/suspicious/noExplicitAny: types not released
   } as unknown as any,
   {
     onMessage: (msg) => {
