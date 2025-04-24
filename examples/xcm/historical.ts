@@ -9,15 +9,13 @@ const agent = createXcmAgent({
 });
 
 agent.subscribe(
-  // TODO: types not yet released
   {
     destinations: "*",
     origins: "*",
     history: {
       timeframe: "previous_2_hours",
     },
-    // biome-ignore lint/suspicious/noExplicitAny: types not released
-  } as unknown as any,
+  },
   {
     onMessage: (msg) => {
       console.log(formatXcmMessage(msg));
