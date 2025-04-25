@@ -20,5 +20,8 @@ agent.subscribe(
     onMessage: (msg) => {
       console.log(formatXcmMessage(msg));
     },
+    onClose: ({reason}) => {
+      console.log(reason);
+    }
   },
 );
