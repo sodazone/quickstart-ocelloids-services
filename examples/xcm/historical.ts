@@ -4,6 +4,12 @@ import { createXcmAgent } from "@sodazone/ocelloids-client";
 
 import { formatXcmMessage } from "./util";
 
+/*
+ * This example requires an access token with additional permissions for historic data.
+ *
+ * 👉 If your team needs an access token with historic access,
+ * please contact us at: projects@soda.zone
+ */
 const { positionals } = parseArgs({
   args: Bun.argv,
   allowPositionals: true,

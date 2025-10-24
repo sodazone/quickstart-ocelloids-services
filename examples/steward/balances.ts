@@ -11,14 +11,17 @@ agent.stream(
   {
     streamName: "balances",
     args: {
-      account: "15YCjbYkV9ETfGQy19JNp6fqURYnW9aJbGo33qUxmAr6FopV",
+      account: ["131d4YS25qpuXiHrfJibuFYXwZrzwxpvU1ahvr3TJFNYcmfk"],
     },
   },
   {
     listeners: [
       {
         event: "balance",
-        onData: (data) => console.log("balance:", data),
+        onData: (data) =>
+          console.log(
+            `balance ${data.origin}: ${(Number(data.balance) / 10 ** (data.decimals ?? 0)).toFixed(4)} ${data.symbol ?? data.assetId} (${data.chainId})`,
+          ),
       },
       {
         event: "status",

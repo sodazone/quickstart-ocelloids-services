@@ -21,7 +21,7 @@ function handleMessage(msg: Message<xcm.XcmMessagePayload>) {
       msg.payload.destination.chainId,
     );
   } else {
-    throw new Error("XCM payload type not supported");
+    console.log(msg.payload.type, msg.payload.waypoint);
   }
   // }
 }
