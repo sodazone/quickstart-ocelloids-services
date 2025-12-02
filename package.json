@@ -18,7 +18,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@sodazone/ocelloids-client": "^3.0.1",
+    "@sodazone/ocelloids-client": "^3.1.1",
     "commander": "^14.0.1",
     "eventsource": "^4.0.0"
   }
